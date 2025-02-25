@@ -38,6 +38,11 @@ Machine generated alt-text for websites
 - Output:
     - Console output containing images and surrounding text found on webpage
 
+
+## To start Flask Web Page
+- start web/templates/app.py
+- click link wow
+
 ## *ONCE FRONT END OPERATIONAL* (ESTIMATED FOR SPRINT THREE):
 ### TO USE PROGRAM:
 - Navigate to [SITE_URL]
