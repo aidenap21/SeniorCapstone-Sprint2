@@ -9,7 +9,7 @@ import csv
 def create_pdf(file_name):
     image_text_list = []
 
-    with open(f"{file_name}.csv", mode="r", newline="", encoding="utf-8") as file:
+    with open(f"outputs/{file_name}.csv", mode="r", newline="", encoding="utf-8") as file:
         reader = csv.reader(file)
         
         next(reader)

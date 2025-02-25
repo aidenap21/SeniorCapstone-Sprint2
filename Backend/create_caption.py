@@ -1,6 +1,6 @@
-from image_processing import ImageProcessor
-from text_processing import *
-from sentence_generator import *
+from Backend.image_processing import ImageProcessor
+from Backend.text_processing import *
+from Backend.sentence_generator import *
 
 def mergeTags(entities):  # Function to merge tags
     
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     Source for the following image and text are https://www.espn.com/nba/story/_/id/43833377/a-rivalry-bromance-failed-reunion-steph-kd-lebron-reunite-all-star-weekend
     '''
 
-    image_path = "images/basketball.jpg"
+    image_path = "inputs/images/basketball.jpg"
     text = "No. 17 Kansas defeated Colorado 71-59 on Tuesday night at Allen Fieldhouse. The Jayhawks (17-7, 8-5 Big 12) won their first of two matchups between the sides. A big reason for that was KU’s defense — a calling card for Bill Self teams. The Jayhawks stepped up on that end in pivotal moments, doing so in a new look of sorts on Tuesday."
 
     caption = create_caption(image_path, text)

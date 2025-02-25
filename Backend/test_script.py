@@ -1,6 +1,6 @@
-from create_caption import create_caption
-from csv_to_pdf import create_pdf
-from main_captioner import *
+from Backend.create_caption import create_caption
+from Backend.csv_to_pdf import create_pdf
+from Backend.main_captioner import *
 import csv
 import time
 
@@ -8,7 +8,7 @@ def run_tests():
     input_data = []
 
     # Open and read the CSV file
-    with open("test_inputs.csv", mode="r", newline="", encoding="utf-8") as file:
+    with open("inputs/test_inputs.csv", mode="r", newline="", encoding="utf-8") as file:
         reader = csv.reader(file)
         
         next(reader)
@@ -17,7 +17,7 @@ def run_tests():
         for row in reader:
             input_data.append(row)
 
-    with open("test_outputs.csv", mode="w", newline="", encoding="utf-8") as file:
+    with open("outputs/test_outputs.csv", mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         
         # Write a header row (optional)
@@ -33,7 +33,7 @@ def run_site_tests():
     input_data = []
 
     # Open and read the CSV file
-    with open("website_test_inputs.csv", mode="r", newline="", encoding="utf-8") as file:
+    with open("inputs/website_test_inputs.csv", mode="r", newline="", encoding="utf-8") as file:
         reader = csv.reader(file)
         
         next(reader)
@@ -42,7 +42,7 @@ def run_site_tests():
         for row in reader:
             input_data.append(row)
 
-    with open("website_test_outputs.csv", mode="w", newline="", encoding="utf-8") as file:
+    with open("outputs/website_test_outputs.csv", mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         
         # Write a header row (optional)

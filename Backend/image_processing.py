@@ -9,7 +9,7 @@ from io import BytesIO
 from PIL import Image
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
-from compile_to_csv import compile_to_csv  # Import the correct function
+from Backend.compile_to_csv import compile_to_csv  # Import the correct function
 
 class ImageProcessor:
     def __init__(self, image_loc, URL=False):
@@ -111,7 +111,7 @@ class ImageProcessor:
             }
         ]
 
-        compile_to_csv("detection_results.csv", image_metadata)  # Use correct function
+        compile_to_csv("outputs/detection_results.csv", image_metadata)  # Use correct function
 
         if show_graph:
             plt.show()
@@ -121,7 +121,7 @@ class ImageProcessor:
 
 if __name__ == "__main__":
     # Load and preprocess the image
-    image_path = "images/lebron.jpg"
+    image_path = "inputs/images/lebron.jpg"
     # image = Image.open(image_path).convert("RGB")
     image_processor = ImageProcessor(image_path)
     caption = image_processor.generate_caption_with_blip()
